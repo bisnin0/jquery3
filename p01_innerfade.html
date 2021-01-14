@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+     https://gist.github.com/coolniikou/665255
+
+	 1. jquery
+	 2. innerfade.js
+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="plugin/jquery.innerfade.js"></script>
+<style>
+	ul, li{list-style-type:none;
+	    margin:0px;
+	    padding:0px;
+	}
+	#imgInner img{
+		width:500px; 
+		height:400px;
+	}
+	#imgInner{
+	    width:500px;
+		height:400px;
+	}
+	div{height:400px;}
+	div:nth-child(2){width:500px;border:2px solid gray; 
+	         font-size:1.5em;}
+	#textInner li{background-color:pink;height:400px;}
+</style>
+<script>
+	$(function(){
+		//이미지에 innerfade적용하기
+		$('#imgInner').innerfade({
+			animationtype:'slide'//애니메이션타입->'slide', 'fade', 기본:'fade'
+			, speed:'slow'//속도->'slow', 'fast', 'normal', 밀리초
+			, timeout:5000// 쇼대기시간
+			, type : 'random'// 'random', 'sequence(기본)', 'random_start' 
+		});	
+		
+		//텍스트에 innerfade적용하기
+		$("#textInner").innerfade({
+			animationtype:'fade',
+			speed:2000,
+			type:'random_start'
+		});
+	});
+</script>
+</head>
+<body>
+<div>
+	<ul id="imgInner">
+		<li><a href="https://www.nate.com"><img src="../img/1.jfif"/></a></li>
+		<li><a href="https://www.naver.com"><img src="../img/13.png"/></a></li>
+		<li><a href="https://www.daum.net"><img src="../img/14.png"/></a></li>
+		<li><a href="../index.html"><img src="../img/picnic.jfif"/></a></li>
+		<li><a href="https://www.gmarket.co.kr"><img src="../img/flower.jpg"/></a></li>
+		<li><a href="#"><img src="../img/4.jpg"/></a></li>
+		<li><a href="#"><img src="../img/book.jfif"/></a></li>
+		<li><a href="#"><img src="../img/a1060.PNG"/></a></li>
+	</ul>
+</div>
+<div>
+	<ul id="textInner">
+		<li>피곤한 상태에서 공복에 마시는 '모닝커피'는 혈당 조절을 방해한다는 연구 결과가 나왔다.실제 많은 사람이 아침 잠을 깨우기 위해 습관적으로 모닝커피를 마신다. 하지만 공복에 마시는 모닝커피는 우리 몸에서 혈당 조절을 하는 인슐린 작용에 문제를 일으킬 수 있다는 지적이다. 영국 배스대학 연구팀은 성인 29명을 세 그룹으로 나눠 숙면·모닝커피 섭취 여부가 혈당 조절에 영향을 미치는지를 연구했다. 연구팀은 대상자들을 ▲숙면한 후 포도당 음료를 마신 그룹 ▲숙면하지 못하고(매 시간 잠에서 깸) 포도당 음료를 마신 그룹 ▲숙면하지 못하고 공복에 블랙커피를 섭취하고 30분 후 포도당 음료를 마신 그룹으로 나눴다.</li>
+		<li>미중 갈등이 격화되고 있는 가운데 중국군의 한 장성이 "한국전쟁은 미국이 천하무적이라는 신화를 깨뜨렸다"며 중국은 충분히 미국을 이길 수 있다고 애국주의 결집에 나섰다. 2일 홍콩사우스차이나모닝포스트(SCMP)에 따르면 중국 군사과학원 특별초빙 수석 전문가 허레이(何雷) 중장은 항미원조(抗美援朝·한국전쟁의 중국식 표현. 미국에 대항하고 북한을 돕는다는 의미) 70주년 기념일(25일)을 앞두고 발표한 기고문에서 이같이 밝혔다.</li>
+		<li>얼마 전 친정에 갔다가 우연히 보게 된 편스토랑! 요즘 유명한 프로라고 하는데 우리는 TV를 사지 않았던지라 편스토랑 15대 출시메뉴가 나오도록한 번도 접해보지 못한 거였다.10대들의 몰표를 받아 우승한이영자 포테이토드림, 감자의 꿈!프로를 보니 정말 맛있어 보이고궁금하기도 해 CU에서 사 왔다.출처: https://limitt.tistory.com/79 [Unlimited]</li>
+		<li>2017년 고액 체납으로 국세청의 ‘명단공개’ 대상이 된 A씨. 국세청은 최근 A씨가 주소지 아닌 곳에 살면서 다른사람 명의 고급 외제차를 몰고 있다는 신고를 받고 조사에 착수했다. 국세청은 3개월간 잠복ㆍ미행을 통해 A씨가 경기 소재 고급 단독주택에 사는 사실을 밝혀내고 현장 수색에 나섰다. A씨의 집에는 미화 1만달러 상당 외화와 명품시계 5점, 그림 5점 등 약 1억원어치 재산이 있었다. 국세청은 이를 모두 압류한 뒤 공매를 진행 중이다.</li>
+		<li>우루스 그라파이트 캡슐은 최신 트렌드가 반영된 흰색, 검정색, 회색 등 4가지의 매트한 외관 색상과 주황색, 노란색, 녹색 등 4가지의 광택이 돋보이는 하이라이트 색상을 옵션으로 제공한다. 이 디자인 트림은 총 16가지 이상의 다양한 색상 조합이 가능해 우루스 커스터마이징의 잠재력을 한 차원 높였으며, 디자인에 민감한 고객들에게도 높은 만족감을 선사한다.</li>
+		<li>신형 G80 스포츠에는 파워트레인의 성능을 높인 3.5리터 트윈터보 V6 엔진과 8단 자동변속기가 적용된다. 최고출력 380마력, 최대토크 54kgm 이상의 성능을 발휘하며, 기존의 V8 엔진 성능에 근접하는 것으로 알려졌다. V8 엔진은 최고출력 425마력, 최대토크는 53kgm다.</li>
+	</ul>
+</div>
+</body>
+</html>

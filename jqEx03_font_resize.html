@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+	input{width:100px; height:40px; font-size:2em;}	
+</style>
+<script>
+	$(function(){
+		//$("#article").css("font-size","15pt");
+		//console.log($("#article").css("font-size"));
+		
+		// 1em=16px
+		
+		$("input").click(function(){
+			var idx = $("input").index(this);
+			var size = parseInt($("#article").css("font-size"));  //현재글자 크기  20px
+			if(idx==0){
+				size = size -1;
+			}else if(idx ==1){
+				size = 16;
+			}else if(idx == 2){
+				size += 1;
+			}
+			$("#article").css("font-size",size+"px");
+		});
+	});
+</script>
+</head>
+<body>
+<input type="button" value="-"/>  <!-- 0 -->
+<input type="button" value="0"/>
+<input type="button" value="+"/>
+<div id="article">
+도널드 트럼프 미국 대통령이 10년 동안 소득세를 내지 않았으며, 세금을 줄이거나 내지 않기 위해 갖은 꼼수를 부린 것으로 나타났다.
+28일(현지시간) 블룸버그통신은 뉴욕타임스(NYT)를 인용해 트럼프 대통령이 지난 2016~2017년 소득세로 고작 750달러(약 88만원)만 납부한 것으로 나타났다고 전했다.
+NYT는 자체 입수한 세무자료 보고서에 대한 분석을 통해 트럼프 대통령이 지난 15년 중 10년간 소득세를 전혀 내지 않았다고 폭로했다. NYT는 이 보고서의 입수 경위를 밝히지 않았지만 합법적인 경로를 통해 입수했다고 밝혔다.
+트럼프 대통령은 자신의 사업이 전체적으로 막대한 손실을 입고 있다고 보고함으로써 자신의 세금을 최소화할 수 있었다.
+NYT는 트럼프 대통령이 2008년 당시 최소 4억3490만달러의 소득을 올렸지만, 세무 보고에는 4740만달러의 손실을 입은 것으로 주장했다고 지적했다.
+NYT는 또 트럼프 대통령이 대규모 손실을 선언한 후 국세청으로부터 이를 이유로 세금 7290만달러(855억원)를 환급받았으며, 이로 인해 10여년 넘게 국세청 감사를 받고 있다고 밝혔다.
+만약 국세청이 감사에서 위법 사항이 적발될 경우, 트럼프 대통령은 1억달러 이상을 벌금으로 낼 수 있다. 이같은 판결이 현실화될 경우, 트럼프 대통령은 파산할 수도 있다고 NYT는 전했다.
+실제 트럼프 대통령은 사업에 상당한 어려움을 겪고 있는 것으로 드러났다.
+</div>
+</body>
+</html>
